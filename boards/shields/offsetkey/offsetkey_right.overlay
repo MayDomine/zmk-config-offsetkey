@@ -104,7 +104,7 @@
         input-processors = <&mouse_runtime_input_processor>;
 
         scroller {
-            layers = <1 2>;
+            layers = <2>;
             input-processors =
                 <&zip_xy_scaler 1 10>,
                 <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>,
