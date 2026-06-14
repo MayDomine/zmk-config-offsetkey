@@ -1,0 +1,6 @@
+config OFFSETKEY_MOUSE_WHEEL_TICK
+    bool "OffsetKey one-shot mouse wheel behavior"
+    depends on ZMK_POINTING
+    default y
+    help
+      Sends a discrete HID mouse wheel report for each behavior press.

@@ -1,0 +1,21 @@
+# Copyright (c) 2026
+# SPDX-License-Identifier: MIT
+
+description: One-shot mouse wheel behavior for encoder ticks
+
+compatible: "offsetkey,behavior-mouse-wheel-tick"
+
+include: two_param.yaml
+
+properties:
+  acceleration-threshold-ms:
+    type: int
+    default: 80
+    description: |
+      Consecutive ticks within this interval increase the acceleration level.
+      Set to 0 to disable acceleration.
+
+  acceleration-max:
+    type: int
+    default: 4
+    description: Maximum multiplier applied to fast consecutive wheel ticks.
