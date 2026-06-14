@@ -17,6 +17,10 @@
 
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
+#define CAN_SEND_MOUSE_REPORT                                                                       \
+    (IS_ENABLED(CONFIG_ZMK_POINTING) &&                                                             \
+     (!IS_ENABLED(CONFIG_ZMK_SPLIT) || IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)))
+
 struct behavior_mouse_wheel_tick_config {
     uint16_t acceleration_threshold_ms;
     uint8_t acceleration_max;
@@ -57,11 +61,15 @@ static int on_pressed(struct zmk_behavior_binding *binding,
     LOG_DBG("Mouse wheel tick x=%d y=%d acceleration=%d", horizontal, vertical,
             data->acceleration_level);
 
+#if CAN_SEND_MOUSE_REPORT
     zmk_hid_mouse_scroll_set(horizontal, vertical);
     int ret = zmk_endpoints_send_mouse_report();
     zmk_hid_mouse_scroll_set(0, 0);
 
     return ret;
+#else
+    return ZMK_BEHAVIOR_OPAQUE;
+#endif
 }
 
 static int on_released(struct zmk_behavior_binding *binding,
