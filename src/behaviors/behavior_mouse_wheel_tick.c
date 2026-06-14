@@ -51,8 +51,8 @@ static int on_pressed(struct zmk_behavior_binding *binding,
     }
     data->last_event_at_ms = now;
 
-    int16_t horizontal = scale_axis(binding->param1, data->acceleration_level);
-    int16_t vertical = scale_axis(binding->param2, data->acceleration_level);
+    int16_t horizontal = scale_axis((int32_t)binding->param1, data->acceleration_level);
+    int16_t vertical = scale_axis((int32_t)binding->param2, data->acceleration_level);
 
     LOG_DBG("Mouse wheel tick x=%d y=%d acceleration=%d", horizontal, vertical,
             data->acceleration_level);
