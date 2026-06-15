@@ -88,8 +88,8 @@
  &kp TAB       &kp Q           &kp W            &kp E           &kp R      &kp T                  &kp Y      &kp U      &kp I          &kp O    &kp P      &kp LBKT   &kp RBKT      &kp BSLH         &rgb_ug RGB_ON  &kp T
  &kp CAPS      &kp A           &kp S            &kp D           &kp F      &kp G                  &kp H      &kp J      &kp K          &kp L    &kp SEMI   &kp APOS   &kp ENTER     &rgb_ug RGB_OFF                  &kp G
  &kp LSHFT     &kp Z           &kp X            &kp C           &kp V      &kp B                  &kp N      &kp M      &kp COMMA      &kp DOT  &kp FSLH   &kp RSHFT  &kp UP_ARROW  &kp DELETE                       &kp B
- &kp LCTRL     &kp LEFT_ALT     &mo 1           &kp LEFT_GUI               &kp SPACE                         &ltq MOUSE_TP SPACE  &kp RIGHT_ALT  &mo 2    &kp RCTRL  &kp LEFT   &kp DOWN      &kp RIGHT                        &kp SPACE
- &kp UP_ARROW  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp ENTER  &kp SPACE              &mkp LCLK  &mkp LCLK  &mkp RCLK      &none
+ &kp LCTRL     &kp LEFT_ALT     &mo 1           &kp LEFT_GUI               &ltq LOWER SPACE                 &sl MOUSE_TP  &kp RIGHT_ALT  &mo 2    &kp RCTRL  &kp LEFT   &kp DOWN      &kp RIGHT                        &kp SPACE
+ &kp UP_ARROW  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp ENTER  &kp SPACE              &mkp LCLK  &mkp RCLK  &mkp LCLK      &none
             >;
 
             label = "layer0";
@@ -101,7 +101,7 @@
  &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6      &kp F7  &kp F8        &kp F9        &kp F10       &kp F11  &kp F12  &trans     &kp HOME             &kp F6
  &trans     &trans  &trans  &mo MOUSE_KEYS  &trans  &trans       &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans   &trans   &trans     &kp PG_UP   &kp END  &trans
  &trans     &trans  &trans  &mkp LCLK       &mkp RCLK  &trans     &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans   &trans   &kp PG_DN  &kp INSERT           &trans
- &trans     &trans  &trans  &trans  &trans  &trans              &none   &none         &trans        &trans        &trans   &trans   &trans     &trans               &trans
+ &trans     &trans  &trans  &kp LG(C)  &kp LG(V)  &trans         &none   &none         &trans        &trans        &trans   &trans   &trans     &trans               &trans
  &trans     &trans  &trans  &trans          &trans                      &trans        &trans        &trans        &trans   &trans   &trans     &trans               &trans
  &trans     &trans  &trans  &trans  &trans  &trans              &trans  &trans        &trans        &trans
             >;
