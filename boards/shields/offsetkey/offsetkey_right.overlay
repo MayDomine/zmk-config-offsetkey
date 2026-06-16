@@ -121,7 +121,6 @@
     y-codes = <INPUT_REL_Y>;
     scale-multiplier = <1>;
     scale-divisor = <300>;
-    rotation-degrees = <(-90)>;
+    rotation-degrees = <0>;
     xy-to-scroll-enabled;
-    y-invert;
 };
