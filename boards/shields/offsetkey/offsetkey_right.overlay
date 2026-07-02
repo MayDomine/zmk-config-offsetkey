@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 #include <dt-bindings/zmk/input_transform.h>
+#include <dt-bindings/zmk/runtime_input_processor.h>
 #include <dt-bindings/led/led.h>
 #include <input/processors.dtsi>
 #include <behaviors/battery_history_request.dtsi>
@@ -123,4 +124,6 @@
     scale-divisor = <300>;
     rotation-degrees = <90>;
     xy-to-scroll-enabled;
+    axis-snap-mode = <AXIS_SNAP_MODE_Y>;
+    axis-snap-threshold = <32767>;
 };
